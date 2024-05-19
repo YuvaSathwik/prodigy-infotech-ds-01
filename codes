@@ -1,0 +1,12 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+
+df=pd.read_csv('gender_classification_v7.csv')
+sns.barplot(x='gender',y='forehead_height_cm',data=df)
+sns.histplot(x='gender',y='forehead_height_cm',data=df)
+sns.distplot(df['forehead_width_cm'])
+sns.jointplot(x='gender',y='forehead_width_cm',data=df)
+sns.pairplot(df)
+sns.violinplot(x='gender',y='forehead_width_cm',data=df)
